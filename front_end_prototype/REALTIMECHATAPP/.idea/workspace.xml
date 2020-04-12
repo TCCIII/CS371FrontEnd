@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2fa11a8b-3beb-4377-a4a8-2ba13fe484ad" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1YJYcCcuC7LiwMqfV8qnULl3WFi" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.15.0" />
+    <property name="js.last.introduce.type" value="LET" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Jon\IdeaProjects\REALTIMECHATAPP\client\src\components\Join" />
+      <recent name="C:\Users\Jon\IdeaProjects\REALTIMECHATAPP\client\src\components\Chat" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2fa11a8b-3beb-4377-a4a8-2ba13fe484ad" name="Default Changelist" comment="" />
+      <created>1582662240630</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582662240630</updated>
+      <workItem from="1582662245163" duration="17466000" />
+      <workItem from="1582767457582" duration="5277000" />
+      <workItem from="1585072483987" duration="6800000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="392" y="89" key="#Project_Structure" timestamp="1585079205508">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="392" y="89" key="#Project_Structure/0.0.1600.860@0.0.1600.860" timestamp="1585079205508" />
+    <state x="380" y="174" key="IDE.errors.dialog" timestamp="1582681700420">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="380" y="174" key="IDE.errors.dialog/0.0.1600.860@0.0.1600.860" timestamp="1582681700420" />
+    <state x="496" y="255" key="com.intellij.ide.util.TipDialog" timestamp="1585072482117">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="496" y="255" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1585072482117" />
+  </component>
+</project>
