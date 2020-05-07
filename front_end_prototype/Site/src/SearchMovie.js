@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import {Link} from "react-router-dom";
+import axios from 'axios';
 import $ from 'jquery';
 import NotFound from './images/imagenotfound.jpg';
 
@@ -11,12 +10,16 @@ class InTheaters extends Component {
         this.onSubmit = this.onSubmit.bind(this);
         this.onChangeSearchTitle = this.onChangeSearchTitle.bind(this);
         this.fetchData = this.fetchData.bind(this);
+        this.addMovie = this.addMovie.bind(this);
 
         this.state = {
                 url: 'https://api.themoviedb.org/3/search/movie?api_key=619797393cd52383263f43d35d25f59f&language=en-US&query=',
                 urlEnd: '&page=1&include_adult=false',
                 search: this.props.search,
-                movies: []
+                movies: [],
+                listId: "e936c6a4-3ddf-4b6c-b95c-404f82653ffe",
+                getMovieUrl: 'https://api.themoviedb.org/3/movie/',
+                getMovieEnd: '?api_key=619797393cd52383263f43d35d25f59f&language=en-US'
         }
     }
 
@@ -60,6 +63,42 @@ class InTheaters extends Component {
         })
     }
 
+    async addMovie(e) {
+        e.preventDefault();
+        var movieId = e.target.value;
+        var addedMovie = {};
+        $.support.cors = true;
+        $.ajax({
+            url: this.state.getMovieUrl + movieId + this.state.getMovieEnd,
+            method: "GET",
+            success: (data) => {
+                addedMovie = data;
+                var currentList = [];
+                axios.get("http://cs371-backend.herokuapp.com/list/")
+                    .then(response => {
+                        currentList = response.data[0];
+                        currentList.movies.push(addedMovie);
+                        console.log(JSON.stringify(currentList));
+                        axios.post( "http://cs371-backend.herokuapp.com/list", currentList )
+                        .then(response => {
+                            
+                        })
+                        .catch(function (error) {
+                            console.log(error)
+                            alert("error")
+                        });
+                    })
+                    .catch(function (error) {
+                        console.log(error)
+                        alert("error")
+                    })
+            },
+            error: (data) => {
+                alert("Error");
+            }
+        })
+    }
+
     render() {
         let link;
         return (
@@ -88,11 +127,14 @@ class InTheaters extends Component {
                                     link = "https://image.tmdb.org/t/p/original" + data.backdrop_path;
                                 }
                                 return (
-                                    <tr>
+                                    <tr key={data.id}>
                                         <td>
                                             <img src={link} width="300" height="200"></img>
                                         </td>
-                                        <td>{data.title}</td>
+                                        <td>
+                                            <h1>{data.title}</h1>
+                                           <p>{data.overview}</p>
+                                        </td>
                                         <td><button value={data.id} onClick={this.addMovie}>Add</button></td>
                                     </tr>
                                 )

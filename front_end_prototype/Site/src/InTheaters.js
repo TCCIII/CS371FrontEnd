@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import $ from 'jquery';
 import NotFound from './images/imagenotfound.jpg';
 
@@ -44,18 +43,20 @@ class InTheaters extends Component {
                         link = "https://image.tmdb.org/t/p/original" + data.backdrop_path;
                     }
                     return(
-                        <div>
-                            <div>
-                                <img src={link} width="300" height="200"></img>
-                            </div>
-                            <section>
-                                <h1>{data.title}</h1>
-                                <div>
-                                    <text>{data.overview}</text>
-                                </div>
-                            </section>
-                        </div>
-                    )
+                            <table key={data.id}>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <img src={link} alt={link} width="300" height="200"/>
+                                        </td>
+                                        <td>
+                                            <h1>{data.title}</h1>
+                                            <p>{data.overview}</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                    );
                 })}
             </div>
         );
